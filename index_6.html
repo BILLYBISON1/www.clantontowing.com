@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clanton Towing | 24/7 Towing &amp; Roadside Assistance — Chilton County, AL</title>
+<meta name="description" content="24/7 emergency towing, flatbed, wrecker, and roadside assistance serving Clanton, Jemison, Thorsby, Maplesville, Verbena and all of Chilton County, AL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --asphalt:#1b1e21;
+    --asphalt-2:#26292d;
+    --amber:#ffb627;
+    --amber-dark:#e09a10;
+    --alert:#d64545;
+    --steel:#5c7285;
+    --paper:#f5f3ee;
+    --paper-dim:#c9c6bd;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--asphalt);
+    color:var(--paper);
+    font-family:'Barlow', sans-serif;
+    line-height:1.55;
+  }
+  h1,h2,h3,.eyebrow{font-family:'Oswald', sans-serif; text-transform:uppercase; letter-spacing:0.03em;}
+  a{color:inherit;}
+  img,svg{display:block; max-width:100%;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px;}
+
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(27,30,33,0.96);
+    border-bottom:1px solid rgba(255,182,39,0.18);
+    backdrop-filter:blur(6px);
+  }
+  .header-inner{display:flex; align-items:center; justify-content:space-between; padding:16px 24px;}
+  .logo{font-size:1.25rem; font-weight:700; letter-spacing:0.04em;}
+  .logo span{color:var(--amber);}
+  .call-btn{
+    display:flex; align-items:center; gap:10px;
+    background:var(--amber); color:var(--asphalt);
+    font-family:'Oswald', sans-serif; font-weight:600; letter-spacing:0.02em;
+    padding:10px 20px; border-radius:3px; text-decoration:none;
+    font-size:1.05rem; white-space:nowrap;
+  }
+  .call-btn small{display:block; font-family:'Barlow',sans-serif; font-weight:500; font-size:0.62rem; text-transform:uppercase; letter-spacing:0.08em; opacity:0.75;}
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:88px 0 72px;
+    background:
+      linear-gradient(180deg, rgba(27,30,33,0) 0%, var(--asphalt) 92%),
+      repeating-linear-gradient(90deg, transparent, transparent 58px, rgba(255,182,39,0.05) 58px, rgba(255,182,39,0.05) 62px);
+    position:relative;
+    overflow:hidden;
+  }
+  .hero .wrap{display:grid; grid-template-columns:1.1fr 0.9fr; gap:48px; align-items:center;}
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    color:var(--alert); font-size:0.78rem; font-weight:600; letter-spacing:0.12em;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{content:''; width:8px; height:8px; border-radius:50%; background:var(--alert); box-shadow:0 0 0 4px rgba(214,69,69,0.25); animation:pulse 1.8s infinite;}
+  @keyframes pulse{0%,100%{opacity:1;} 50%{opacity:0.35;}}
+  .hero h1{font-size:clamp(2.1rem, 4vw, 3.2rem); line-height:1.08; margin-bottom:18px;}
+  .hero h1 em{font-style:normal; color:var(--amber);}
+  .hero p{color:var(--paper-dim); font-size:1.08rem; max-width:46ch; margin-bottom:32px;}
+  .cta-row{display:flex; gap:14px; flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--amber); color:var(--asphalt); font-family:'Oswald',sans-serif;
+    font-weight:600; letter-spacing:0.02em; padding:15px 26px; border-radius:3px;
+    text-decoration:none; font-size:1rem;
+  }
+  .btn-ghost{
+    border:1px solid var(--paper-dim); color:var(--paper); font-family:'Oswald',sans-serif;
+    font-weight:600; letter-spacing:0.02em; padding:14px 26px; border-radius:3px;
+    text-decoration:none; font-size:1rem;
+  }
+
+  /* ---------- Radar / coverage graphic (signature element) ---------- */
+  .radar{position:relative; width:100%; aspect-ratio:1/1; max-width:420px; margin:0 auto;}
+  .radar svg{width:100%; height:100%;}
+  .radar-ring{fill:none; stroke:rgba(255,182,39,0.16); stroke-width:1;}
+  .radar-sweep{transform-origin:210px 210px; animation:sweep 4s linear infinite;}
+  @keyframes sweep{from{transform:rotate(0deg);} to{transform:rotate(360deg);}}
+  .radar-dot{fill:var(--amber);}
+  .radar-label{font-family:'Barlow',sans-serif; font-size:11px; fill:var(--paper-dim); letter-spacing:0.02em;}
+  .radar-center{fill:var(--alert);}
+  .radar-center-label{font-family:'Oswald',sans-serif; font-size:12px; font-weight:600; fill:var(--paper); letter-spacing:0.04em;}
+
+  /* ---------- Section shell ---------- */
+  section{padding:76px 0;}
+  .section-head{max-width:640px; margin-bottom:44px;}
+  .section-head .eyebrow{color:var(--amber);}
+  .section-head .eyebrow::before{background:var(--amber); box-shadow:0 0 0 4px rgba(255,182,39,0.2); animation:none;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.3rem); margin-bottom:12px;}
+  .section-head p{color:var(--paper-dim); font-size:1.02rem;}
+
+  /* ---------- Fleet ---------- */
+  .fleet-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:20px;}
+  .fleet-card{position:relative; border-radius:4px; overflow:hidden; border:1px solid rgba(255,255,255,0.1);}
+  .fleet-card img{width:100%; height:100%; object-fit:cover; display:block;}
+  .fleet-card.dark{aspect-ratio:4/3;}
+  .fleet-card.light{aspect-ratio:4/3; background:#f5f3ee;}
+  .fleet-card.light img{object-fit:contain; padding:20px;}
+  .fleet-tag{position:absolute; left:16px; bottom:16px; background:rgba(27,30,33,0.85); color:var(--amber); font-family:'Oswald',sans-serif; font-size:0.78rem; font-weight:600; letter-spacing:0.06em; padding:8px 14px; border-radius:3px; text-transform:uppercase;}
+  .fleet-card.light .fleet-tag{background:rgba(27,30,33,0.9); color:var(--amber);}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--asphalt-2);}
+  .service-grid{display:grid; grid-template-columns:repeat(auto-fit, minmax(230px,1fr)); gap:1px; background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06);}
+  .service-card{background:var(--asphalt-2); padding:28px 24px;}
+  .service-card .num{font-family:'Oswald',sans-serif; color:var(--amber); font-size:0.85rem; font-weight:600; letter-spacing:0.06em; margin-bottom:14px; display:block;}
+  .service-card h3{font-size:1.08rem; margin-bottom:8px;}
+  .service-card p{color:var(--paper-dim); font-size:0.92rem;}
+
+  /* ---------- Service area ---------- */
+  .area-layout{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  .county-block{margin-bottom:26px;}
+  .county-block h3{font-size:0.78rem; letter-spacing:0.1em; color:var(--amber); margin-bottom:12px;}
+  .town-list{display:flex; flex-wrap:wrap; gap:8px;}
+  .town-chip{
+    border:1px solid rgba(255,255,255,0.14); padding:7px 14px; border-radius:20px;
+    font-size:0.88rem; color:var(--paper-dim);
+  }
+  .town-chip.home{border-color:var(--amber); color:var(--amber); font-weight:600;}
+
+  /* ---------- How it works ---------- */
+  .steps{background:var(--asphalt-2);}
+  .step-row{display:grid; grid-template-columns:repeat(3,1fr); gap:32px;}
+  .step{padding-top:18px; border-top:2px solid var(--amber);}
+  .step .step-num{font-family:'Oswald',sans-serif; font-size:2rem; color:var(--amber); font-weight:700; display:block; margin-bottom:10px;}
+  .step h3{font-size:1.05rem; margin-bottom:8px;}
+  .step p{color:var(--paper-dim); font-size:0.92rem;}
+
+  /* ---------- Trust strip ---------- */
+  .trust-strip{display:flex; flex-wrap:wrap; gap:36px; padding:36px 0; border-top:1px solid rgba(255,255,255,0.08); border-bottom:1px solid rgba(255,255,255,0.08);}
+  .trust-item{display:flex; align-items:baseline; gap:10px;}
+  .trust-item .big{font-family:'Oswald',sans-serif; font-size:1.6rem; color:var(--amber); font-weight:700;}
+  .trust-item .lbl{color:var(--paper-dim); font-size:0.88rem;}
+
+  /* ---------- Quote form ---------- */
+  .quote{background:linear-gradient(180deg, var(--asphalt-2), var(--asphalt));}
+  .quote-box{display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:start;}
+  form{display:grid; gap:14px;}
+  label{font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--paper-dim); margin-bottom:6px; display:block;}
+  input, select, textarea{
+    width:100%; background:var(--asphalt); border:1px solid rgba(255,255,255,0.16); color:var(--paper);
+    padding:12px 14px; border-radius:3px; font-family:'Barlow',sans-serif; font-size:0.96rem;
+  }
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--amber); outline-offset:1px;}
+  .field{display:flex; flex-direction:column;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .submit-btn{
+    background:var(--amber); color:var(--asphalt); border:none; font-family:'Oswald',sans-serif;
+    font-weight:600; letter-spacing:0.02em; padding:15px; border-radius:3px; font-size:1rem; cursor:pointer; margin-top:6px;
+  }
+  .submit-btn:hover{background:var(--amber-dark);}
+  .form-note{color:var(--paper-dim); font-size:0.82rem; margin-top:10px;}
+
+  /* ---------- Footer ---------- */
+  footer{padding:36px 0; border-top:1px solid rgba(255,255,255,0.08);}
+  .footer-inner{display:flex; flex-wrap:wrap; justify-content:space-between; gap:16px; align-items:flex-start;}
+  .disclosure{color:var(--paper-dim); font-size:0.78rem; max-width:60ch; line-height:1.6;}
+  .footer-phone{font-family:'Oswald',sans-serif; color:var(--amber); font-weight:600; font-size:1.1rem; text-decoration:none;}
+
+  @media (max-width: 860px){
+    .hero .wrap, .area-layout, .quote-box, .fleet-grid{grid-template-columns:1fr;}
+    .radar{margin-top:20px;}
+    .step-row{grid-template-columns:1fr;}
+    .field-row{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner wrap">
+    <div class="logo">CLANTON<span>TOWING</span></div>
+    <!-- TODO: replace tel: number and displayed number sitewide before launch -->
+    <a class="call-btn" href="tel:0000000000">
+      📞 (000) 000-0000
+      <small>Call now — 24/7 dispatch</small>
+    </a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Live dispatch available now</div>
+      <h1>Stuck on the roadside?<br><em>Help's on the way.</em></h1>
+      <p>24/7 towing, recovery, and roadside assistance covering Clanton and every corner of Chilton County — plus the towns just across the county line.</p>
+      <div class="cta-row">
+        <a href="tel:0000000000" class="btn-primary">Call for a tow</a>
+        <a href="#quote" class="btn-ghost">Request online</a>
+      </div>
+    </div>
+    <div class="radar" aria-hidden="true">
+      <svg viewBox="0 0 420 420">
+        <circle class="radar-ring" cx="210" cy="210" r="60"></circle>
+        <circle class="radar-ring" cx="210" cy="210" r="120"></circle>
+        <circle class="radar-ring" cx="210" cy="210" r="180"></circle>
+        <g class="radar-sweep">
+          <path d="M210 210 L210 30 A180 180 0 0 1 275 45 Z" fill="url(#sweepGrad)"></path>
+        </g>
+        <defs>
+          <linearGradient id="sweepGrad" x1="210" y1="210" x2="275" y2="45" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#ffb627" stop-opacity="0.35"/>
+            <stop offset="1" stop-color="#ffb627" stop-opacity="0"/>
+          </linearGradient>
+        </defs>
+        <circle class="radar-center" cx="210" cy="210" r="6"></circle>
+        <text class="radar-center-label" x="222" y="214">CLANTON</text>
+        <circle class="radar-dot" cx="210" cy="70" r="4"></circle>
+        <text class="radar-label" x="220" y="74">Thorsby</text>
+        <circle class="radar-dot" cx="330" cy="150" r="4"></circle>
+        <text class="radar-label" x="340" y="154">Alabaster</text>
+        <circle class="radar-dot" cx="340" cy="270" r="4"></circle>
+        <text class="radar-label" x="350" y="274">Wetumpka</text>
+        <circle class="radar-dot" cx="230" cy="370" r="4"></circle>
+        <text class="radar-label" x="238" y="390">Prattville</text>
+        <circle class="radar-dot" cx="90" cy="330" r="4"></circle>
+        <text class="radar-label" x="30" y="352">Centreville</text>
+        <circle class="radar-dot" cx="70" cy="190" r="4"></circle>
+        <text class="radar-label" x="6" y="184">Maplesville</text>
+        <circle class="radar-dot" cx="130" cy="90" r="4"></circle>
+        <text class="radar-label" x="70" y="80">Jemison</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="fleet">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Our equipment</div>
+      <h2>Heavy-duty rigs built for real recovery work</h2>
+      <p>Rotator and wheel-lift wreckers rated for everything from a stuck sedan to a loaded semi.</p>
+    </div>
+    <div class="fleet-grid">
+      <div class="fleet-card dark">
+        <img src="images/wrecker-black.png" alt="Heavy-duty rotator tow truck on Chilton County road">
+        <span class="fleet-tag">Rotator Recovery Unit</span>
+      </div>
+      <div class="fleet-card light">
+        <img src="images/wrecker-white.webp" alt="Heavy-duty wheel-lift wrecker truck">
+        <span class="fleet-tag">Wheel-Lift Wrecker</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What we handle</div>
+      <h2>Every kind of roadside emergency</h2>
+      <p>One call connects you with a local towing provider dispatched to your exact location.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Emergency Towing</h3>
+        <p>Breakdowns, dead vehicles, and anything that needs to move now.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Flatbed Towing</h3>
+        <p>Low-clearance, AWD, and newer vehicles hauled without drivetrain risk.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>Wrecker &amp; Accident Recovery</h3>
+        <p>On-scene recovery, winch-outs, and post-accident vehicle removal.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>Roadside Assistance</h3>
+        <p>Jump starts, flat tire changes, and emergency fuel delivery.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">05</span>
+        <h3>Lockout Service</h3>
+        <p>Locked out with keys inside? We'll get the door open, no damage.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">06</span>
+        <h3>Motorcycle &amp; Heavy-Duty</h3>
+        <p>Specialized equipment for bikes, trucks, and oversized loads.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">07</span>
+        <h3>Long-Distance Towing</h3>
+        <p>Out-of-county transport for repairs, dealerships, or relocation.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">08</span>
+        <h3>Junk &amp; Abandoned Vehicle</h3>
+        <p>Removal for property managers, landlords, and private lots.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="area">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Where we go</div>
+      <h2>Serving all of Chilton County — and beyond</h2>
+      <p>Based in Clanton, with coverage into every neighboring county.</p>
+    </div>
+    <div class="area-layout">
+      <div>
+        <div class="county-block">
+          <h3>Chilton County</h3>
+          <div class="town-list">
+            <span class="town-chip home">Clanton</span>
+            <span class="town-chip">Jemison</span>
+            <span class="town-chip">Thorsby</span>
+            <span class="town-chip">Maplesville</span>
+            <span class="town-chip">Verbena</span>
+          </div>
+        </div>
+        <div class="county-block">
+          <h3>Shelby County</h3>
+          <div class="town-list">
+            <span class="town-chip">Alabaster</span>
+            <span class="town-chip">Calera</span>
+            <span class="town-chip">Montevallo</span>
+          </div>
+        </div>
+        <div class="county-block">
+          <h3>Autauga County</h3>
+          <div class="town-list">
+            <span class="town-chip">Prattville</span>
+            <span class="town-chip">Autaugaville</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="county-block">
+          <h3>Elmore County</h3>
+          <div class="town-list">
+            <span class="town-chip">Wetumpka</span>
+            <span class="town-chip">Millbrook</span>
+          </div>
+        </div>
+        <div class="county-block">
+          <h3>Bibb County</h3>
+          <div class="town-list">
+            <span class="town-chip">Centreville</span>
+            <span class="town-chip">West Blocton</span>
+          </div>
+        </div>
+        <div class="county-block">
+          <h3>Coosa &amp; Perry Counties</h3>
+          <div class="town-list">
+            <span class="town-chip">Rockford</span>
+            <span class="town-chip">Marion</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">How it works</div>
+      <h2>From call to curbside in three steps</h2>
+    </div>
+    <div class="step-row">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Call or request online</h3>
+        <p>Tell us where you are and what's wrong — takes under a minute.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>We dispatch the nearest driver</h3>
+        <p>A local towing provider is sent directly to your location.</p>
+      </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>You're back on the road</h3>
+        <p>Vehicle towed or fixed on-site, so you can get moving again.</p>
+      </div>
+    </div>
+    <div class="trust-strip">
+      <div class="trust-item"><span class="big">24/7</span><span class="lbl">Dispatch availability</span></div>
+      <div class="trust-item"><span class="big">6</span><span class="lbl">Counties covered</span></div>
+      <div class="trust-item"><span class="big">Licensed</span><span class="lbl">&amp; insured providers</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote" id="quote">
+  <div class="wrap">
+    <div class="quote-box">
+      <div>
+        <div class="section-head">
+          <div class="eyebrow">Request a tow</div>
+          <h2>Tell us where you are</h2>
+          <p>For true emergencies, calling is faster. Use this form for non-urgent requests or scheduled tows.</p>
+        </div>
+      </div>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <!-- TODO: replace with your own Web3Forms access key before launch -->
+        <input type="hidden" name="access_key" value="YOUR-WEB3FORMS-ACCESS-KEY">
+        <div class="field-row">
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input id="phone" name="phone" type="tel" required>
+          </div>
+        </div>
+        <div class="field">
+          <label for="location">Your location</label>
+          <input id="location" name="location" type="text" placeholder="Address, cross streets, or landmark" required>
+        </div>
+        <div class="field">
+          <label for="issue">What's going on?</label>
+          <select id="issue" name="issue">
+            <option>Vehicle won't start</option>
+            <option>Flat tire</option>
+            <option>Accident / needs recovery</option>
+            <option>Locked out</option>
+            <option>Out of fuel</option>
+            <option>Need a scheduled tow</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="notes">Additional details (optional)</label>
+          <textarea id="notes" name="notes" rows="3"></textarea>
+        </div>
+        <button class="submit-btn" type="submit">Send request</button>
+        <p class="form-note">For immediate emergencies, please call <a href="tel:0000000000" style="color:var(--amber);">(000) 000-0000</a> instead of using this form.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div>
+      <div class="logo" style="margin-bottom:10px;">CLANTON<span>TOWING</span></div>
+      <a class="footer-phone" href="tel:0000000000">(000) 000-0000</a>
+    </div>
+    <p class="disclosure">
+      ClantonTowing.com connects callers with a licensed, independent local towing provider serving Chilton County and surrounding areas. This site is a dispatch and referral service, not a towing company itself. &copy; 2026 Clanton Towing.
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
